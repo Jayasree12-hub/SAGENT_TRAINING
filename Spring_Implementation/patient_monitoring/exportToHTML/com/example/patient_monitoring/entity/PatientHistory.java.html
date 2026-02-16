@@ -1,0 +1,101 @@
+<html>
+<head>
+<title>PatientHistory.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+PatientHistory.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com</span><span class="s2">.</span><span class="s1">example</span><span class="s2">.</span><span class="s1">patient_monitoring</span><span class="s2">.</span><span class="s1">entity</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">com</span><span class="s2">.</span><span class="s1">fasterxml</span><span class="s2">.</span><span class="s1">jackson</span><span class="s2">.</span><span class="s1">annotation</span><span class="s2">.</span><span class="s1">JsonIgnore</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">jakarta</span><span class="s2">.</span><span class="s1">persistence</span><span class="s2">.*;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">time</span><span class="s2">.</span><span class="s1">LocalDate</span><span class="s2">;</span>
+
+<span class="s1">@Entity</span>
+<span class="s1">@Table</span><span class="s2">(</span><span class="s1">name </span><span class="s2">= </span><span class="s3">&quot;patient_history&quot;</span><span class="s2">)</span>
+<span class="s0">public class </span><span class="s1">PatientHistory </span><span class="s2">{</span>
+
+    <span class="s1">@Id</span>
+    <span class="s1">@GeneratedValue</span><span class="s2">(</span><span class="s1">strategy </span><span class="s2">= </span><span class="s1">GenerationType</span><span class="s2">.</span><span class="s1">IDENTITY</span><span class="s2">)</span>
+    <span class="s0">private </span><span class="s1">Integer patientHistoryId</span><span class="s2">;</span>
+
+    <span class="s1">@ManyToOne</span>
+    <span class="s1">@JoinColumn</span><span class="s2">(</span><span class="s1">name </span><span class="s2">= </span><span class="s3">&quot;patient_id&quot;</span><span class="s2">, </span><span class="s1">nullable </span><span class="s2">= </span><span class="s0">false</span><span class="s2">)</span>
+    <span class="s1">@JsonIgnore</span>
+    <span class="s0">private </span><span class="s1">Patient patient</span><span class="s2">;</span>
+
+    <span class="s1">@ManyToOne</span>
+    <span class="s1">@JoinColumn</span><span class="s2">(</span><span class="s1">name </span><span class="s2">= </span><span class="s3">&quot;doctor_id&quot;</span><span class="s2">, </span><span class="s1">nullable </span><span class="s2">= </span><span class="s0">false</span><span class="s2">)</span>
+    <span class="s1">@JsonIgnore</span>
+    <span class="s0">private </span><span class="s1">Doctor doctor</span><span class="s2">;</span>
+
+    <span class="s0">private </span><span class="s1">String medicalReport</span><span class="s2">;</span>
+
+    <span class="s0">private </span><span class="s1">LocalDate reportDate</span><span class="s2">;</span>
+
+    <span class="s0">private </span><span class="s1">String diagnosis</span><span class="s2">;</span>
+
+    <span class="s4">// Getters and Setters</span>
+
+    <span class="s0">public </span><span class="s1">Integer getPatientHistoryId</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">patientHistoryId</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setPatientHistoryId</span><span class="s2">(</span><span class="s1">Integer patientHistoryId</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">patientHistoryId </span><span class="s2">= </span><span class="s1">patientHistoryId</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">Patient getPatient</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">patient</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setPatient</span><span class="s2">(</span><span class="s1">Patient patient</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">patient </span><span class="s2">= </span><span class="s1">patient</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">Doctor getDoctor</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">doctor</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setDoctor</span><span class="s2">(</span><span class="s1">Doctor doctor</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">doctor </span><span class="s2">= </span><span class="s1">doctor</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">String getMedicalReport</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">medicalReport</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setMedicalReport</span><span class="s2">(</span><span class="s1">String medicalReport</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">medicalReport </span><span class="s2">= </span><span class="s1">medicalReport</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">LocalDate getReportDate</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">reportDate</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setReportDate</span><span class="s2">(</span><span class="s1">LocalDate reportDate</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">reportDate </span><span class="s2">= </span><span class="s1">reportDate</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">String getDiagnosis</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">diagnosis</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setDiagnosis</span><span class="s2">(</span><span class="s1">String diagnosis</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">diagnosis </span><span class="s2">= </span><span class="s1">diagnosis</span><span class="s2">;</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
