@@ -1,0 +1,27 @@
+.star-row {
+  display: flex;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.star-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  color: var(--border);
+  transition: color 0.12s, transform 0.1s;
+  line-height: 1;
+}
+.star-btn:hover,
+.star-btn--active {
+  color: #d4a017;
+}
+.star-btn:hover { transform: scale(1.1); }
+
+.stars-display {
+  color: #d4a017;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
