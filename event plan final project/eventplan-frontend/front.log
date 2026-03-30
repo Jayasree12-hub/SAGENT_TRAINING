@@ -1,0 +1,21 @@
+
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m690[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.56.1:[1m5173[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.183.1:[1m5173[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.138.1:[1m5173[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.31.231:[1m5173[22m/[39m
+[2m8:55:35 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/tabs/ChatTab.jsx, /src/index.css[22m
+[2m8:59:18 am[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m8:59:18 am[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m10:48:48 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/Login.jsx, /src/pages/VendorLogin.jsx, /src/pages/RsvpRespond.jsx, /src/pages/Register.jsx, /src/pages/EventDetail.jsx, /src/pages/OtpVerify.jsx, /src/pages/OrganizerDashboard.jsx, /src/pages/VendorRegister.jsx, /src/pages/VendorDashboard.jsx, /src/pages/TeamMemberDashboard.jsx, /src/components/tabs/EventsTab.jsx, /src/components/tabs/BudgetsTab.jsx, /src/components/tabs/GuestsTab.jsx, /src/components/tabs/VendorsTab.jsx, /src/components/tabs/InvitationsTab.jsx, /src/components/tabs/TasksTab.jsx, /src/components/tabs/ChatTab.jsx[22m
+[2m10:48:48 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/tabs/ChatTab.jsx, /src/index.css[22m
+[2m10:50:07 am[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m10:50:07 am[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m10:56:31 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/tabs/ChatTab.jsx, /src/index.css[22m
+[2m10:57:06 am[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m10:57:07 am[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m11:08:34 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Login.jsx, /src/index.css[22m
+[2m11:22:28 am[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m11:22:28 am[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mdist/index.html[22m
